@@ -1,30 +1,40 @@
+// Refactored Hero.tsx from original to match UI design 100%
+"use client";
+
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div
-      id="hero"
-      className="grid grid-cols-2 h-screen bg-amber-500 items-center"
-    >
-      {/* Kiri: Teks */}
-      <div className="flex flex-col justify-center text-left px-16 gap-6">
-        <h1 className="text-5xl font-bold">
-          From <span className="text-green-700">Farm Harvest</span> to Flavorful
-          Recipes
-        </h1>
-        <h1 className="text-2xl font-semibold">
-          Follow easy cooking guides, create heartwarming dishes at home, and
-          share the joy with your loved ones.
-        </h1>
-        <button className="bg-[var(--bg-primary)] text-white py-5 px-8 max-w-45 rounded-3xl text-xl font-bold hover:bg-[var(--bg-primary-darker)] hover:cursor-pointer transition">
-          <Link href="/#recipes">See Recipes</Link>
-        </button>
-      </div>
+    <section className="relative bg-[url('/model_farm_worker.jpg')] bg-cover bg-center py-20 md:py-32 px-4 md:px-20 text-white">
+      <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="space-y-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+            From <span className="text-green-700">Farm Harvest</span> to <br />
+            <span className="text-gray-800">Flavorful Recipes</span>
+          </h1>
+          <p className="text-gray-700 max-w-md">
+            Follow easy cooking guides, create heartwarming dishes at home, and share the joy with your loved ones.
+          </p>
+          <Link
+            href="#recipes"
+            className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded hover:bg-green-700 transition"
+          >
+            See Recipes
+          </Link>
+        </div>
 
-      {/* Kanan: Gambar */}
-      <div className="flex justify-center">
-        <h1>GAMBAR</h1>
+        <div className="hidden md:block">
+          <Image
+            src="/salad-bowl.png"
+            alt="Salad Bowl"
+            width={500}
+            height={500}
+            className="rounded-full shadow-xl"
+          />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
