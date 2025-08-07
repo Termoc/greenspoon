@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Moto() {
   return (
     <section className="w-full bg-[var(--bg-secondary)] py-16 px-6">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
+      <div className="container mx-auto py-[10rem] flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
         {/* === BAGIAN GAMBAR YANG DIPERBARUI === */}
         <div className="relative w-[300px] h-[300px] md:w-[350px] md:h-[350px] flex-shrink-0 rounded-full bg-[var(--bg-primary)] shadow-2xl overflow-hidden">
           <Image
