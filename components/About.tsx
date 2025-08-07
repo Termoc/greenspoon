@@ -15,7 +15,7 @@ export default function About() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-green-700 opacity-60"></div>
+        <div className="absolute inset-0 bg-[#628B32] opacity-60"></div>
       </div>
 
       {/* Konten */}
