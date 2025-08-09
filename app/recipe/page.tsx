@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import Card from "@/components/Card";
-import Searchbar from "@/components/Searchbar";
 import {
   fetchBySearch,
   fetchByCategory,
@@ -121,14 +120,6 @@ export default function RecipeP() {
 
   return (
     <>
-      <Searchbar
-        search={search}
-        setSearch={setSearch}
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-        onSubmit={handleSearchSubmit}
-      />
-
       <Card>
         <div className="flex flex-col min-h-[calc(100vh-150px)]">
           {loading && (
@@ -201,24 +192,71 @@ export default function RecipeP() {
           </div>
 
           {!loading && !error && recipes.length > 0 && (
-            <div className="flex justify-center items-center mt-8 space-x-4 pb-8">
-              <button
-                onClick={handlePrevPage}
-                disabled={currentPage === 1}
-                className="rounded-md bg-[#EA2F14] py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-[#C02610] focus:shadow-none active:bg-[#A1200D] hover:bg-[#C02610] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-              >
-                Sebelumnya
-              </button>
+            <div className="flex flex-col items-center mt-8 space-y-4 pb-8">
               <span className="text-lg font-medium text-slate-700">
-                Halaman {currentPage} dari {totalPages}
+                Menampilkan {indexOfFirstRecipe + 1}–
+                {Math.min(indexOfLastRecipe, recipes.length)} dari{" "}
+                {recipes.length} resep
               </span>
-              <button
-                onClick={handleNextPage}
-                disabled={currentPage === totalPages}
-                className="rounded-md bg-[#EA2F14] py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-[#C02610] focus:shadow-none active:bg-[#A1200D] hover:bg-[#C02610] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-              >
-                Berikutnya
-              </button>
+
+              <div className="flex items-center space-x-2">
+                {/* Tombol halaman */}
+                {(() => {
+                  const pages = [];
+                  const maxPagesToShow = 5; // jumlah maksimal tombol page di tengah
+                  const total = totalPages;
+
+                  const showPage = (pageNum: number) => {
+                    pages.push(
+                      <button
+                        key={pageNum}
+                        onClick={() => {
+                          setCurrentPage(pageNum);
+                          updatePageInUrl(pageNum);
+                        }}
+                        className={`w-10 h-10 flex items-center justify-center rounded-full border text-sm font-medium transition-all duration-200 ${
+                          currentPage === pageNum
+                            ? "bg-green-600 text-white border-green-600"
+                            : "bg-white text-gray-700 border-gray-300 hover:bg-green-50"
+                        }`}
+                      >
+                        {pageNum}
+                      </button>
+                    );
+                  };
+
+                  if (total <= maxPagesToShow) {
+                    // Jika halaman sedikit, tampilkan semua
+                    for (let i = 1; i <= total; i++) showPage(i);
+                  } else {
+                    // Selalu tampilkan halaman pertama
+                    showPage(1);
+
+                    // Tambah "..." jika jauh dari awal
+                    if (currentPage > 3) {
+                      pages.push(<span key="start-ellipsis">...</span>);
+                    }
+
+                    // Halaman di sekitar currentPage
+                    const start = Math.max(2, currentPage - 1);
+                    const end = Math.min(total - 1, currentPage + 1);
+
+                    for (let i = start; i <= end; i++) {
+                      showPage(i);
+                    }
+
+                    // Tambah "..." jika jauh dari akhir
+                    if (currentPage < total - 2) {
+                      pages.push(<span key="end-ellipsis">...</span>);
+                    }
+
+                    // Selalu tampilkan halaman terakhir
+                    showPage(total);
+                  }
+
+                  return pages;
+                })()}
+              </div>
             </div>
           )}
         </div>

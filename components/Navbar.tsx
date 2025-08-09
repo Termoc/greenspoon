@@ -1,10 +1,12 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { FaSearch } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import Searchbar from "@/components/Searchbar";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,23 +28,25 @@ export default function Navbar() {
         >
           {/* Logo */}
           <div className="text-xl font-extrabold text-green-700 flex items-center gap-1">
-            GREEN SPOON <span className="text-green-600 text-2xl">🥄</span>
+            <img
+              src="/icons/Logo.svg"
+              alt="Green Spoon Logo"
+              width={150}
+              height={150}
+            />
           </div>
 
           {/* Navigation Links */}
           <div className="hidden items-center md:flex gap-[40px] text-gray-800 font-medium">
             <Link href="/#hero">Home</Link>
-            <Link href="/#recipes">Recipes</Link>
+            <Link href="/recipe">Recipes</Link>
             <Link href="/#about">About</Link>
             {/* Search bar */}
-            <div className="flex items-center bg-gray-100 rounded-[15px] px-3 py-1">
-              <input
-                type="text"
-                placeholder="Search for recipes..."
-                className="bg-transparent focus:outline-none text-sm px-2 py-1 w-[140px] md:w-[180px]"
-              />
-              <FaSearch className="text-green-600 text-sm" />
-            </div>
+            <Searchbar
+              onSubmit={(value) => {
+                router.push(`/recipe?s=${encodeURIComponent(value)}`);
+              }}
+            />
           </div>
         </div>
       </div>
