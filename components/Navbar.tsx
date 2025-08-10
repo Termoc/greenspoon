@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Searchbar from "@/components/Searchbar";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -28,7 +29,7 @@ export default function Navbar() {
         >
           {/* Logo */}
           <div className="text-xl font-extrabold text-green-700 flex items-center gap-1">
-            <img
+            <Image
               src="/icons/Logo.svg"
               alt="Green Spoon Logo"
               width={150}
