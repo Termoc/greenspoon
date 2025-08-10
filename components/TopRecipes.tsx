@@ -63,7 +63,7 @@ export default function TopRecipes() {
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-extrabold text-slate-800 mb-3">
-          Today Signature Recipes
+          Today&apos;s Signature Recipes
         </h2>
         <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
           Inspiration from local farm harvests for your kitchen.
