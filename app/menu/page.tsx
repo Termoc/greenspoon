@@ -14,16 +14,15 @@ interface Recipe {
   instructions: string;
 }
 
-export default function Menu() {
+export default function MenuContent() {
   const searchParams = useSearchParams();
   const searchTerm = searchParams.get("s")?.toLowerCase() || "";
-
   const [recipes, setRecipes] = useState<Recipe[]>([]);
 
   useEffect(() => {
     const fuse = new Fuse(recipesData as Recipe[], {
       keys: ["name", "ingredients", "instructions"],
-      threshold: 0.3, // semakin kecil semakin ketat pencariannya
+      threshold: 0.3,
     });
 
     if (searchTerm) {
@@ -36,9 +35,6 @@ export default function Menu() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
-      {/* Search Bar */}
-
-      {/* Recipes Grid */}
       {recipes.length === 0 ? (
         <p className="text-gray-600">No recipes found.</p>
       ) : (
