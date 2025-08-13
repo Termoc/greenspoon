@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "name": "Sup Tomat Segar",
+    "image": "/images/sup-tomat.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Nasi Goreng Spesial",
+    "image": "/images/nasi-goreng.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Sate Ayam Madura",
+    "image": "/images/sate-ayam.jpg"
+  }
+]

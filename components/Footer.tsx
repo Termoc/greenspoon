@@ -5,7 +5,7 @@ import { FaXTwitter } from "react-icons/fa6"; // Untuk ikon X (sebelumnya Twitte
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[var(--bg-secondary-darker)] py-12 px-6 text-[var(--color-footer-text)]">
+    <footer className="w-full bg-[var(--bg-secondary-darker)] py-12 px-6 text-[var(--color-footer-text)] bottom-0">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10">
         {/* Bagian Kiri: Logo dan Deskripsi */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-md">
