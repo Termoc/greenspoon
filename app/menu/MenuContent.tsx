@@ -34,7 +34,7 @@ export default function MenuContent() {
   }, [searchTerm]);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
+    <div className="max-w-6xl mx-auto px-4 py-10 items-center justify-center text-center">
       {recipes.length === 0 ? (
         <p className="text-gray-600">No recipes found.</p>
       ) : (
