@@ -34,11 +34,14 @@ export default function RecipesContent() {
     }
   }, [searchTerm]);
 
-  return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12 items-center justify-center text-center">
-      {recipes.length === 0 ? (
-        <p className="text-gray-600 text-sm sm:text-base">No recipes found.</p>
-      ) : (
+  	return (
+		<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12 items-center justify-center text-center flex-1 flex flex-col justify-center">
+			{recipes.length === 0 ? (
+				<div className="flex flex-col items-center justify-center flex-1 min-h-[60vh]">
+					<p className="text-gray-600 text-sm sm:text-base mb-4">No recipes found.</p>
+					<p className="text-gray-500 text-xs sm:text-sm">Try adjusting your search terms or browse all recipes.</p>
+				</div>
+			) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {recipes.map((recipe) => (
             <Link
