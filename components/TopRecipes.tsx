@@ -8,8 +8,9 @@ interface Recipe {
   id: string;
   name: string;
   image: string;
-  ingredients: string[];
-  instructions: string;
+  ingredients?: string[];
+  instructions?: string;
+  prepTime?: string;
 }
 
 export default function TopRecipes() {
@@ -60,8 +61,9 @@ export default function TopRecipes() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {recipes.map((recipe) => (
-            <div
+            <Link
               key={recipe.id}
+              href={`/recipe/${recipe.id}`}
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden flex flex-col"
             >
               <div className="relative w-full h-48">
@@ -82,11 +84,10 @@ export default function TopRecipes() {
                 </p>
 
                 <div className="flex justify-between items-center text-gray-600 text-sm border-t border-gray-200 pt-3 mt-auto">
-                  <span className="flex items-center gap-1">⏱ 15-20 Menit</span>
-                  <span className="flex items-center gap-1">🍽 1 Porsi</span>
+                  <span className="flex items-center gap-1">⏱ {recipe.prepTime ?? "15–20 Menit"}</span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

@@ -2,16 +2,60 @@
   {
     "id": "1",
     "name": "Sup Tomat Segar",
-    "image": "/images/sup-tomat.jpg"
+    "image": "/images/sup-tomat.jpg",
+    "ingredients": [
+      "4 buah tomat matang, potong besar",
+      "1 siung bawang putih, cincang",
+      "1/2 buah bawang bombay, cincang",
+      "500 ml kaldu sayur/ayam",
+      "1 sdm minyak zaitun",
+      "Garam dan lada secukupnya",
+      "Gula pasir sejumput",
+      "Daun basil/daun seledri untuk taburan"
+    ],
+    "instructions": "Panaskan minyak zaitun, tumis bawang bombay dan bawang putih hingga harum.\nMasukkan tomat, aduk hingga layu dan mengeluarkan air.\nTuang kaldu, bumbui dengan garam, lada, dan sejumput gula. Masak 10–15 menit.\nBlender sup hingga halus (opsional), lalu didihkan kembali sebentar.\nSajikan hangat dengan taburan daun basil atau seledri.",
+    "prepTime": "10 menit",
+    "cookTime": "15 menit",
+    "servings": 2,
+    "difficulty": "Mudah"
   },
   {
     "id": "2",
     "name": "Nasi Goreng Spesial",
-    "image": "/images/nasi-goreng.jpg"
+    "image": "/images/nasi-goreng.jpg",
+    "ingredients": [
+      "1 piring nasi putih dingin",
+      "2 siung bawang putih, cincang",
+      "1 butir telur",
+      "3 sdm kecap manis",
+      "1 sdm saus tiram (opsional)",
+      "2 sdm minyak untuk menumis",
+      "Garam, lada, dan cabai sesuai selera",
+      "Irisan daun bawang dan acar sebagai pelengkap"
+    ],
+    "instructions": "Panaskan minyak, tumis bawang putih hingga harum.\nMasukkan telur, orak-arik.\nTambahkan nasi, aduk rata dan tekan-tekan agar tidak bergerindil.\nBumbui dengan kecap manis, saus tiram, garam, lada, dan cabai. Aduk hingga rata dan wangi.\nTambahkan daun bawang, aduk sebentar, lalu sajikan dengan pelengkap.",
+    "prepTime": "10 menit",
+    "cookTime": "10 menit",
+    "servings": 1,
+    "difficulty": "Mudah"
   },
   {
     "id": "3",
     "name": "Sate Ayam Madura",
-    "image": "/images/sate-ayam.jpg"
+    "image": "/images/sate-ayam.jpg",
+    "ingredients": [
+      "500 g daging ayam, potong dadu",
+      "10–12 tusuk sate",
+      "2 siung bawang putih, haluskan",
+      "2 sdm kecap manis",
+      "1 sdm minyak",
+      "Garam dan lada secukupnya",
+      "Bumbu kacang dan lontong untuk penyajian"
+    ],
+    "instructions": "Lumuri ayam dengan bawang putih, kecap, minyak, garam, dan lada. Diamkan 20–30 menit.\nTusukkan ayam pada tusuk sate.\nBakar/panggang hingga matang dan sedikit karam. Olesi sisa bumbu selama memanggang.\nSajikan dengan bumbu kacang dan lontong.",
+    "prepTime": "20 menit",
+    "cookTime": "20 menit",
+    "servings": 3,
+    "difficulty": "Sedang"
   }
 ]

@@ -36,7 +36,7 @@ export default function Footer() {
           <ul className="space-y-2 mb-6 text-white">
             <li>
               <a
-                href="#"
+                href="/#"
                 className="hover:underline text-[var(--color-footer-link)]"
               >
                 Home
@@ -44,7 +44,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="#"
+                href="/menu"
                 className="hover:underline text-[var(--color-footer-link)]"
               >
                 Recipes
@@ -52,7 +52,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="#"
+                href="/#about"
                 className="hover:underline text-[var(--color-footer-link)]"
               >
                 About

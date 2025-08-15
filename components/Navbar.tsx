@@ -39,7 +39,7 @@ export default function Navbar() {
 
           {/* Navigation Links */}
           <div className="hidden items-center md:flex gap-[40px] text-gray-800 font-medium">
-            <Link href="/#hero">Home</Link>
+            <Link href="/#">Home</Link>
             <Link href="/menu">Menu</Link>
             <Link href="/#about">About</Link>
             {/* Search bar */}
