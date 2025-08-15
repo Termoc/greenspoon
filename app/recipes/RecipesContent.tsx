@@ -15,7 +15,7 @@ interface Recipe {
 	instructions?: string;
 }
 
-export default function MenuContent() {
+export default function RecipesContent() {
 	const searchParams = useSearchParams();
 	const searchTerm = searchParams.get("s")?.toLowerCase() || "";
 	const [recipes, setRecipes] = useState<Recipe[]>([]);
@@ -64,4 +64,4 @@ export default function MenuContent() {
 			)}
 		</div>
 	);
-}
+} 

@@ -40,12 +40,12 @@ export default function Navbar() {
           {/* Navigation Links */}
           <div className="hidden items-center md:flex gap-[40px] text-gray-800 font-medium">
             <Link href="/#">Home</Link>
-            <Link href="/menu">Menu</Link>
+            <Link href="/recipes">Recipes</Link>
             <Link href="/#about">About</Link>
             {/* Search bar */}
             <Searchbar
               onSubmit={(value) => {
-                router.push(`/menu?s=${encodeURIComponent(value)}`);
+                router.push(`/recipes?s=${encodeURIComponent(value)}`);
               }}
             />
           </div>

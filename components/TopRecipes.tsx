@@ -92,7 +92,7 @@ export default function TopRecipes() {
         </div>
 
         <div className="mt-12">
-          <Link href="/menu">
+          <Link href="/recipes">
             <button className="bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-10 rounded-xl text-lg transition duration-300">
               See All Recipes
             </button>

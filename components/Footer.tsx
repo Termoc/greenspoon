@@ -44,7 +44,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="/menu"
+                href="/recipes"
                 className="hover:underline text-[var(--color-footer-link)]"
               >
                 Recipes
