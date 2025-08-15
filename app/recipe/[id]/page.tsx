@@ -50,7 +50,9 @@ export default function RecipeDetailPage() {
   if (!recipe) {
     return (
       <main className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 text-center">
-        <h1 className="text-2xl sm:text-3xl font-bold text-red-600">Recipe not found</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold text-red-600">
+          Recipe not found
+        </h1>
         <p className="mt-2 text-gray-600 text-sm sm:text-base">
           We couldn&apos;t find the recipe you were looking for.
         </p>
@@ -75,7 +77,11 @@ export default function RecipeDetailPage() {
             onClick={handleShare}
             className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 sm:px-4 py-2 rounded-lg transition text-sm sm:text-base"
           >
-            {copied ? <Check size={16} className="sm:w-4 sm:h-4" /> : <Share2 size={16} className="sm:w-4 sm:h-4" />}
+            {copied ? (
+              <Check size={16} className="sm:w-4 sm:h-4" />
+            ) : (
+              <Share2 size={16} className="sm:w-4 sm:h-4" />
+            )}
             {copied ? "Copied!" : "Share"}
           </button>
         </div>
@@ -169,7 +175,11 @@ export default function RecipeDetailPage() {
             }}
             className="flex items-center justify-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition text-sm sm:text-base"
           >
-            {copied ? <Check size={16} className="sm:w-4 sm:h-4" /> : <Copy size={16} className="sm:w-4 sm:h-4" />}
+            {copied ? (
+              <Check size={16} className="sm:w-4 sm:h-4" />
+            ) : (
+              <Copy size={16} className="sm:w-4 sm:h-4" />
+            )}
             {copied ? "Copied!" : "Copy Link"}
           </button>
         </div>

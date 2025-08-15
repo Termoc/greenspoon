@@ -42,7 +42,10 @@ export default function TopRecipes() {
   }, []);
 
   return (
-    <section id="recipes" className="bg-white py-12 sm:py-16 md:py-20 font-inter">
+    <section
+      id="recipes"
+      className="bg-white py-12 sm:py-16 md:py-20 font-inter"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 items-center text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-800 mb-3 sm:mb-4">
           Today&apos;s Signature Recipes
@@ -52,11 +55,15 @@ export default function TopRecipes() {
         </p>
 
         {loading && (
-          <p className="text-base sm:text-lg text-gray-700">Memuat resep pilihan...</p>
+          <p className="text-base sm:text-lg text-gray-700">
+            Memuat resep pilihan...
+          </p>
         )}
         {error && <p className="text-red-500 text-sm sm:text-base">{error}</p>}
         {!loading && !error && recipes.length === 0 && (
-          <p className="text-gray-700 text-sm sm:text-base">Tidak ada resep ditemukan.</p>
+          <p className="text-gray-700 text-sm sm:text-base">
+            Tidak ada resep ditemukan.
+          </p>
         )}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
@@ -84,7 +91,9 @@ export default function TopRecipes() {
                 </p>
 
                 <div className="flex justify-between items-center text-gray-600 text-xs sm:text-sm border-t border-gray-200 pt-2 sm:pt-3 mt-auto">
-                  <span className="flex items-center gap-1">⏱ {recipe.prepTime ?? "15–20 Menit"}</span>
+                  <span className="flex items-center gap-1">
+                    ⏱ {recipe.prepTime ?? "15–20 Menit"}
+                  </span>
                 </div>
               </div>
             </Link>

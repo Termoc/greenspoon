@@ -46,9 +46,15 @@ export default function Navbar() {
 
           {/* Navigation Links - Desktop */}
           <div className="hidden items-center md:flex gap-6 lg:gap-8 xl:gap-[40px] text-gray-800 font-medium">
-            <Link href="/#" className="hover:text-green-700 transition">Home</Link>
-            <Link href="/recipes" className="hover:text-green-700 transition">Recipes</Link>
-            <Link href="/#about" className="hover:text-green-700 transition">About</Link>
+            <Link href="/#" className="hover:text-green-700 transition">
+              Home
+            </Link>
+            <Link href="/recipes" className="hover:text-green-700 transition">
+              Recipes
+            </Link>
+            <Link href="/#about" className="hover:text-green-700 transition">
+              About
+            </Link>
             {/* Search bar */}
             <Searchbar
               onSubmit={(value) => {
@@ -58,12 +64,22 @@ export default function Navbar() {
           </div>
 
           {/* Mobile menu button */}
-          <button 
+          <button
             className="md:hidden p-2 text-gray-800 hover:text-green-700 transition"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           </button>
         </div>
@@ -72,22 +88,22 @@ export default function Navbar() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-white shadow-lg border-t border-gray-200">
             <div className="px-4 py-4 space-y-4">
-              <Link 
-                href="/#" 
+              <Link
+                href="/#"
                 className="block text-gray-800 hover:text-green-700 transition py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
-              <Link 
-                href="/recipes" 
+              <Link
+                href="/recipes"
                 className="block text-gray-800 hover:text-green-700 transition py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Recipes
               </Link>
-              <Link 
-                href="/#about" 
+              <Link
+                href="/#about"
                 className="block text-gray-800 hover:text-green-700 transition py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >

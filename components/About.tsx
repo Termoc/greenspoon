@@ -42,7 +42,9 @@ export default function About() {
                 className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
               />
             </div>
-            <h3 className="text-base sm:text-lg font-bold text-gray-700 mb-2">Choose Your Ingredients</h3>
+            <h3 className="text-base sm:text-lg font-bold text-gray-700 mb-2">
+              Choose Your Ingredients
+            </h3>
             <p className="text-xs sm:text-sm text-gray-700">
               Pick fresh, local farm produce for your recipe needs.
             </p>
@@ -59,7 +61,9 @@ export default function About() {
                 className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20"
               />
             </div>
-            <h3 className="text-base sm:text-lg font-bold text-gray-700 mb-2">Follow Our Recipes</h3>
+            <h3 className="text-base sm:text-lg font-bold text-gray-700 mb-2">
+              Follow Our Recipes
+            </h3>
             <p className="text-xs sm:text-sm text-gray-700">
               Use our curated farm-to-table recipes for healthy meals.
             </p>
@@ -76,7 +80,9 @@ export default function About() {
                 className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
               />
             </div>
-            <h3 className="text-base sm:text-lg font-bold text-gray-700 mb-2">Support Local Farming</h3>
+            <h3 className="text-base sm:text-lg font-bold text-gray-700 mb-2">
+              Support Local Farming
+            </h3>
             <p className="text-xs sm:text-sm text-gray-700">
               Every meal you cook helps strengthen local farms and empower
               communities.
