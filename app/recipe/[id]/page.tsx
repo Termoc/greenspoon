@@ -49,14 +49,14 @@ export default function RecipeDetailPage() {
 
   if (!recipe) {
     return (
-      <main className="max-w-5xl mx-auto px-6 py-12 text-center">
-        <h1 className="text-3xl font-bold text-red-600">Recipe not found</h1>
-        <p className="mt-2 text-gray-600">
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 text-center">
+        <h1 className="text-2xl sm:text-3xl font-bold text-red-600">Recipe not found</h1>
+        <p className="mt-2 text-gray-600 text-sm sm:text-base">
           We couldn&apos;t find the recipe you were looking for.
         </p>
         <Link
           href="/recipes"
-          className="inline-block mt-6 text-green-700 hover:underline"
+          className="inline-block mt-6 text-green-700 hover:underline text-sm sm:text-base"
         >
           Back to recipes
         </Link>
@@ -66,21 +66,21 @@ export default function RecipeDetailPage() {
 
   return (
     <main className="bg-gradient-to-b from-green-50 to-white min-h-screen">
-      <section className="max-w-6xl mx-auto px-6 py-10">
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-slate-800">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-800">
             {recipe.name}
           </h1>
           <button
             onClick={handleShare}
-            className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition"
+            className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-3 sm:px-4 py-2 rounded-lg transition text-sm sm:text-base"
           >
-            {copied ? <Check size={18} /> : <Share2 size={18} />}
+            {copied ? <Check size={16} className="sm:w-4 sm:h-4" /> : <Share2 size={16} className="sm:w-4 sm:h-4" />}
             {copied ? "Copied!" : "Share"}
           </button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
           <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-lg group">
             <Image
               src={recipe.image}
@@ -91,7 +91,7 @@ export default function RecipeDetailPage() {
           </div>
 
           <div>
-            <div className="mt-2 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+            <div className="mt-2 grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 text-xs sm:text-sm">
               {recipe.prepTime && (
                 <div className="bg-green-100 border border-green-200 rounded-lg p-3 text-center shadow-sm">
                   <span className="block text-green-700">Prep</span>
@@ -127,11 +127,11 @@ export default function RecipeDetailPage() {
             </div>
 
             {recipe.ingredients && recipe.ingredients.length > 0 && (
-              <div className="mt-8">
-                <h2 className="text-xl font-bold text-slate-800 mb-3">
+              <div className="mt-6 sm:mt-8">
+                <h2 className="text-lg sm:text-xl font-bold text-slate-800 mb-2 sm:mb-3">
                   Ingredients
                 </h2>
-                <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                <ul className="list-disc pl-4 sm:pl-5 space-y-1 sm:space-y-2 text-sm sm:text-base text-gray-700">
                   {recipe.ingredients.map((item, idx) => (
                     <li key={idx}>{item}</li>
                   ))}
@@ -142,11 +142,11 @@ export default function RecipeDetailPage() {
         </div>
 
         {recipe.instructions && (
-          <div className="mt-10">
-            <h2 className="text-xl font-bold text-slate-800 mb-3">
+          <div className="mt-8 sm:mt-10">
+            <h2 className="text-lg sm:text-xl font-bold text-slate-800 mb-2 sm:mb-3">
               Instructions
             </h2>
-            <ol className="list-decimal pl-5 space-y-3 text-gray-700">
+            <ol className="list-decimal pl-4 sm:pl-5 space-y-2 sm:space-y-3 text-sm sm:text-base text-gray-700">
               {recipe.instructions.split("\n").map((step, idx) => (
                 <li key={idx}>{step}</li>
               ))}
@@ -154,10 +154,10 @@ export default function RecipeDetailPage() {
           </div>
         )}
 
-        <div className="mt-10 flex gap-4">
+        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
           <Link
             href="/recipes"
-            className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition"
+            className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition text-sm sm:text-base text-center"
           >
             Back to recipes
           </Link>
@@ -167,9 +167,9 @@ export default function RecipeDetailPage() {
               setCopied(true);
               setTimeout(() => setCopied(false), 2000);
             }}
-            className="flex items-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 px-6 rounded-lg transition"
+            className="flex items-center justify-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition text-sm sm:text-base"
           >
-            {copied ? <Check size={18} /> : <Copy size={18} />}
+            {copied ? <Check size={16} className="sm:w-4 sm:h-4" /> : <Copy size={16} className="sm:w-4 sm:h-4" />}
             {copied ? "Copied!" : "Copy Link"}
           </button>
         </div>

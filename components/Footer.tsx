@@ -5,19 +5,19 @@ import { FaXTwitter } from "react-icons/fa6"; // Untuk ikon X (sebelumnya Twitte
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[var(--bg-secondary-darker)] py-12 px-6 text-[var(--color-footer-text)] bottom-0">
-      <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10">
+    <footer className="w-full bg-[var(--bg-secondary-darker)] py-8 sm:py-12 px-4 sm:px-6 text-[var(--color-footer-text)] bottom-0">
+      <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start gap-6 sm:gap-8 lg:gap-10">
         {/* Bagian Kiri: Logo dan Deskripsi */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-md">
-          <div className="flex items-center mb-4">
+          <div className="flex items-center mb-3 sm:mb-4">
             {/* Placeholder untuk logo Green Spoon */}
-            <span className="text-4xl font-bold text-[var(--bg-primary)]">
+            <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--bg-primary)]">
               GREEN SPOON
             </span>
             {/* Anda bisa mengganti ini dengan komponen Image jika ada logo SVG/gambar */}
             {/* <Image src="/path/to/greenspoon-logo.svg" alt="Green Spoon Logo" width={40} height={40} className="ml-2" /> */}
           </div>
-          <p className="text-sm leading-relaxed mb-6 text-white">
+          <p className="text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6 text-white">
             Green spoon is dedicated to bridging the gap between local farmers
             and your kitchen by sharing fresh, healthy, and sustainable recipes.
             We celebrate the richness of locally grown ingredients and turn them
@@ -30,10 +30,10 @@ export default function Footer() {
 
         {/* Bagian Kanan: Quick Links dan Ikon Sosial */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
-          <h3 className="text-xl font-bold mb-4 text-[var(--bg-primary)]">
+          <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-[var(--bg-primary)]">
             Quick Links
           </h3>
-          <ul className="space-y-2 mb-6 text-white">
+          <ul className="space-y-1 sm:space-y-2 mb-4 sm:mb-6 text-white text-sm sm:text-base">
             <li>
               <a
                 href="/#"
@@ -61,34 +61,34 @@ export default function Footer() {
           </ul>
 
           {/* Ikon Sosial */}
-          <div className="flex space-x-4 text-white">
+          <div className="flex space-x-3 sm:space-x-4 text-white">
             {/* Instagram */}
             <a
               href="#"
-              className="w-10 h-10 rounded-full bg-[var(--color-footer-icon-bg)] flex items-center justify-center hover:opacity-80 transition-opacity"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[var(--color-footer-icon-bg)] flex items-center justify-center hover:opacity-80 transition-opacity"
             >
-              <FaInstagram className="w-5 h-5 text-[var(--color-footer-text)]" />
+              <FaInstagram className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--color-footer-text)]" />
             </a>
             {/* Email */}
             <a
               href="#"
-              className="w-10 h-10 rounded-full bg-[var(--color-footer-icon-bg)] flex items-center justify-center hover:opacity-80 transition-opacity"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[var(--color-footer-icon-bg)] flex items-center justify-center hover:opacity-80 transition-opacity"
             >
-              <MdEmail className="w-5 h-5 text-[var(--color-footer-text)]" />
+              <MdEmail className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--color-footer-text)]" />
             </a>
             {/* X (Twitter) */}
             <a
               href="#"
-              className="w-10 h-10 rounded-full bg-[var(--color-footer-icon-bg)] flex items-center justify-center hover:opacity-80 transition-opacity"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[var(--color-footer-icon-bg)] flex items-center justify-center hover:opacity-80 transition-opacity"
             >
-              <FaXTwitter className="w-5 h-5 text-[var(--color-footer-text)]" />
+              <FaXTwitter className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--color-footer-text)]" />
             </a>
             {/* Facebook */}
             <a
               href="#"
-              className="w-10 h-10 rounded-full bg-[var(--color-footer-icon-bg)] flex items-center justify-center hover:opacity-80 transition-opacity"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[var(--color-footer-icon-bg)] flex items-center justify-center hover:opacity-80 transition-opacity"
             >
-              <FaFacebookF className="w-5 h-5 text-[var(--color-footer-text)]" />
+              <FaFacebookF className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--color-footer-text)]" />
             </a>
           </div>
         </div>

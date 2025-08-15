@@ -42,31 +42,31 @@ export default function TopRecipes() {
   }, []);
 
   return (
-    <section id="recipes" className="bg-white py-20 font-inter">
-      <div className="max-w-7xl mx-auto px-6 items-center text-center">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-slate-800 mb-3">
+    <section id="recipes" className="bg-white py-12 sm:py-16 md:py-20 font-inter">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 items-center text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-800 mb-3 sm:mb-4">
           Today&apos;s Signature Recipes
         </h2>
-        <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto">
           Inspiration from local farm harvests for your kitchen.
         </p>
 
         {loading && (
-          <p className="text-lg text-gray-700">Memuat resep pilihan...</p>
+          <p className="text-base sm:text-lg text-gray-700">Memuat resep pilihan...</p>
         )}
-        {error && <p className="text-red-500">{error}</p>}
+        {error && <p className="text-red-500 text-sm sm:text-base">{error}</p>}
         {!loading && !error && recipes.length === 0 && (
-          <p className="text-gray-700">Tidak ada resep ditemukan.</p>
+          <p className="text-gray-700 text-sm sm:text-base">Tidak ada resep ditemukan.</p>
         )}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {recipes.map((recipe) => (
             <Link
               key={recipe.id}
               href={`/recipe/${recipe.id}`}
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden flex flex-col"
             >
-              <div className="relative w-full h-48">
+              <div className="relative w-full h-40 sm:h-48">
                 <Image
                   src={recipe.image}
                   alt={recipe.name}
@@ -74,16 +74,16 @@ export default function TopRecipes() {
                   className="object-cover"
                 />
               </div>
-              <div className="p-5 flex flex-col flex-grow">
-                <h3 className="text-lg font-bold text-slate-800 mb-2">
+              <div className="p-3 sm:p-4 lg:p-5 flex flex-col flex-grow">
+                <h3 className="text-sm sm:text-base lg:text-lg font-bold text-slate-800 mb-2">
                   {recipe.name}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-grow">
+                <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 line-clamp-3 flex-grow">
                   {recipe.instructions?.split(". ")[0] ||
                     "Resep ini adalah hidangan lezat yang mudah dibuat."}
                 </p>
 
-                <div className="flex justify-between items-center text-gray-600 text-sm border-t border-gray-200 pt-3 mt-auto">
+                <div className="flex justify-between items-center text-gray-600 text-xs sm:text-sm border-t border-gray-200 pt-2 sm:pt-3 mt-auto">
                   <span className="flex items-center gap-1">⏱ {recipe.prepTime ?? "15–20 Menit"}</span>
                 </div>
               </div>
@@ -91,9 +91,9 @@ export default function TopRecipes() {
           ))}
         </div>
 
-        <div className="mt-12">
+        <div className="mt-8 sm:mt-12">
           <Link href="/recipes">
-            <button className="bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-10 rounded-xl text-lg transition duration-300">
+            <button className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 sm:py-4 px-6 sm:px-10 rounded-xl text-sm sm:text-base lg:text-lg transition duration-300">
               See All Recipes
             </button>
           </Link>

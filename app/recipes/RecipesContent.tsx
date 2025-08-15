@@ -35,18 +35,18 @@ export default function RecipesContent() {
 	}, [searchTerm]);
 
 	return (
-		<div className="max-w-6xl mx-auto px-4 py-10 items-center justify-center text-center">
+		<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12 items-center justify-center text-center">
 			{recipes.length === 0 ? (
-				<p className="text-gray-600">No recipes found.</p>
+				<p className="text-gray-600 text-sm sm:text-base">No recipes found.</p>
 			) : (
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
 					{recipes.map((recipe) => (
 						<Link
 							key={recipe.id}
 							href={`/recipe/${recipe.id}`}
-							className="bg-white rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col"
+							className="bg-white rounded-xl shadow hover:shadow-lg transition p-3 sm:p-4 lg:p-6 flex flex-col"
 						>
-							<div className="relative w-full h-48">
+							<div className="relative w-full h-40 sm:h-48 lg:h-56">
 								<Image
 									src={recipe.image}
 									alt={recipe.name}
@@ -54,8 +54,8 @@ export default function RecipesContent() {
 									className="object-cover rounded-lg"
 								/>
 							</div>
-							<h3 className="mt-4 font-bold text-lg">{recipe.name}</h3>
-							<p className="text-sm text-gray-600 mt-2 line-clamp-3">
+							<h3 className="mt-3 sm:mt-4 font-bold text-sm sm:text-base lg:text-lg">{recipe.name}</h3>
+							<p className="text-xs sm:text-sm text-gray-600 mt-2 line-clamp-3">
 								{recipe.instructions || "Discover the full recipe details."}
 							</p>
 						</Link>
