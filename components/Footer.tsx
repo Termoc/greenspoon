@@ -2,6 +2,7 @@
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
 import { MdEmail } from "react-icons/md"; // Untuk ikon email
 import { FaXTwitter } from "react-icons/fa6"; // Untuk ikon X (sebelumnya Twitter)
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -35,61 +36,61 @@ export default function Footer() {
           </h3>
           <ul className="space-y-1 sm:space-y-2 mb-4 sm:mb-6 text-white text-sm sm:text-base">
             <li>
-              <a
+              <Link
                 href="/#"
                 className="hover:underline text-[var(--color-footer-link)]"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/recipes"
                 className="hover:underline text-[var(--color-footer-link)]"
               >
                 Recipes
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/#about"
                 className="hover:underline text-[var(--color-footer-link)]"
               >
                 About
-              </a>
+              </Link>
             </li>
           </ul>
 
           {/* Ikon Sosial */}
           <div className="flex space-x-3 sm:space-x-4 text-white">
             {/* Instagram */}
-            <a
+            <Link
               href="#"
               className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[var(--color-footer-icon-bg)] flex items-center justify-center hover:opacity-80 transition-opacity"
             >
               <FaInstagram className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--color-footer-text)]" />
-            </a>
+            </Link>
             {/* Email */}
-            <a
+            <Link
               href="#"
               className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[var(--color-footer-icon-bg)] flex items-center justify-center hover:opacity-80 transition-opacity"
             >
               <MdEmail className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--color-footer-text)]" />
-            </a>
+            </Link>
             {/* X (Twitter) */}
-            <a
+            <Link
               href="#"
               className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[var(--color-footer-icon-bg)] flex items-center justify-center hover:opacity-80 transition-opacity"
             >
               <FaXTwitter className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--color-footer-text)]" />
-            </a>
+            </Link>
             {/* Facebook */}
-            <a
+            <Link
               href="#"
               className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[var(--color-footer-icon-bg)] flex items-center justify-center hover:opacity-80 transition-opacity"
             >
               <FaFacebookF className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--color-footer-text)]" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -28,8 +28,8 @@ export default function Moto() {
             I believe that good food starts with good soil. Through Greenspoon,
             my mission is to connect local farmers with your kitchen, bringing
             you fresh, healthy recipes inspired by generations of agricultural
-            wisdom. From field to fork, I'm committed to supporting sustainable
-            farming and creating flavorful meals you can enjoy.
+            wisdom. From field to fork, I&apos;m committed to supporting
+            sustainable farming and creating flavorful meals you can enjoy.
           </p>
         </div>
       </div>
